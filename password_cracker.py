@@ -1,6 +1,8 @@
 import hashlib
 
-
+def hash_password(p):
+    hashed = hashlib.sha1(p)
+    return hashed.hexdigest()
 
 def crack_sha1_hash(hash, use_salts = False):
     a = 0
